@@ -25,7 +25,7 @@
             $immagine = UPLOAD_DIR . '/' . $_FILES['image']['name'];
         }
         else{
-            $immagine = $_POST['img_selezionata'];
+            $immagine = $_POST['img'];
         }
         if($_GET['action'] == 'salva'){
             $db->Query('UPDATE articoli SET titolo = :titolo, contenuto = :contenuto, modifica = :modifica, utente = :utente, immagine = :immagine WHERE id = :id', array(
